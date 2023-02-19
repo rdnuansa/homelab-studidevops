@@ -1,3 +1,6 @@
 version: 3
 projects:
-- dir: live/
+- dir: live/gcp/sandbox/dev.sandbox/compute-instance
+  execution_order_group: 2
+- dir: live/gcp/sandbox/dev.sandbox/vpc
+  execution_order_group: 1
