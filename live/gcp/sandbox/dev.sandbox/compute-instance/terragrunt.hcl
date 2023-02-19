@@ -22,10 +22,10 @@ inputs = {
 dependency "vpc" {
   config_path = "../vpc"
 
-  # mock_outputs = {
-  #   vpc_id = "DUMMY_VPC_ID"
-  #   subnet_id = "DUMMY_SUBNET_ID"
-  # }
+  mock_outputs = {
+    vpc_id = "DUMMY_VPC_ID"
+    subnet_id = "DUMMY_SUBNET_ID"
+  }
 }
 
 ## see: https://terragrunt.gruntwork.io/docs/reference/config-blocks-and-attributes/#include
