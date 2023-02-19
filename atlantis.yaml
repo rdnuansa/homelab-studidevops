@@ -1,0 +1,92 @@
+parallel_apply: true
+parallel_plan: true
+projects:
+- autoplan:
+    enabled: false
+    when_modified:
+    - '*.hcl'
+    - '*.tf*'
+    - ../environment.hcl
+    - ../../project.hcl
+    - ../../../../root.hcl
+    - ../vpc/terragrunt.hcl
+    - ../../../../../modules/gcp/vpc/*.tf*
+    - ../../../../../modules/gcp/compute-instance/*.tf*
+  dir: live/gcp/andromeda/dev/compute-instance
+- autoplan:
+    enabled: false
+    when_modified:
+    - '*.hcl'
+    - '*.tf*'
+    - ../environment.hcl
+    - ../../project.hcl
+    - ../../../../root.hcl
+    - ../../../../../modules/gcp/vpc/*.tf*
+  dir: live/gcp/andromeda/dev/vpc
+- autoplan:
+    enabled: false
+    when_modified:
+    - '*.hcl'
+    - '*.tf*'
+    - ../environment.hcl
+    - ../../project.hcl
+    - ../../../../root.hcl
+    - ../vpc/terragrunt.hcl
+    - ../../../../../modules/gcp/vpc/*.tf*
+    - ../../../../../modules/gcp/compute-instance/*.tf*
+  dir: live/gcp/andromeda/prod/compute-instance
+- autoplan:
+    enabled: false
+    when_modified:
+    - '*.hcl'
+    - '*.tf*'
+    - ../environment.hcl
+    - ../../project.hcl
+    - ../../../../root.hcl
+    - ../../../../../modules/gcp/vpc/*.tf*
+  dir: live/gcp/andromeda/prod/vpc
+- autoplan:
+    enabled: false
+    when_modified:
+    - '*.hcl'
+    - '*.tf*'
+    - ../environment.hcl
+    - ../../project.hcl
+    - ../../../../root.hcl
+    - ../vpc/terragrunt.hcl
+    - ../../../../../modules/gcp/vpc/*.tf*
+    - ../../../../../modules/gcp/compute-instance/*.tf*
+  dir: live/gcp/andromeda/staging/compute-instance
+- autoplan:
+    enabled: false
+    when_modified:
+    - '*.hcl'
+    - '*.tf*'
+    - ../environment.hcl
+    - ../../project.hcl
+    - ../../../../root.hcl
+    - ../../../../../modules/gcp/vpc/*.tf*
+  dir: live/gcp/andromeda/staging/vpc
+- autoplan:
+    enabled: false
+    when_modified:
+    - '*.hcl'
+    - '*.tf*'
+    - ../environment.hcl
+    - ../../project.hcl
+    - ../../../../root.hcl
+    - ../vpc/terragrunt.hcl
+    - ../../../../../modules/gcp/vpc/*.tf*
+    - ../../../../../modules/gcp/compute-instance/*.tf*
+  dir: live/gcp/sandbox/dev.sandbox/compute-instance
+- autoplan:
+    enabled: false
+    when_modified:
+    - '*.hcl'
+    - '*.tf*'
+    - ../environment.hcl
+    - ../../project.hcl
+    - ../../../../root.hcl
+    - ../../../../../modules/gcp/vpc/*.tf*
+  dir: live/gcp/sandbox/dev.sandbox/vpc
+version: 3 
